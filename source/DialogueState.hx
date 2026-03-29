@@ -69,9 +69,10 @@ class DialogueState extends FlxState
 			{
 				inDialogue = false;
 
-                FlxTimer.wait(1, () -> {
-                    FlxG.switchState(() -> new PlayState(level));
-                });
+				FlxTimer.wait(1, () ->
+				{
+					FlxG.switchState(() -> new PlayState(level));
+				});
 			}
 			diaText.screenCenter();
 
@@ -94,5 +95,5 @@ class DialogueState extends FlxState
 
 	public var dia_kue:FlxSprite;
 
-	final dk = [1, 4];
+	final dk = [1, 4, 5];
 }
