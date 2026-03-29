@@ -59,6 +59,12 @@ class PlayState extends FlxState
 
 			fgOptionElements.add(new TouchMeSprite(401, 0, getLevelAsset('rope.png')).addClickFunction(o -> newLevel('climbRope')));
 		}
+		if (level == 'enterDoor')
+		{
+			FlxG.camera.bgColor = FlxColor.fromString('#1E1218');
+
+			bgElements.add(new TouchMeSprite(0, 0, getLevelAsset('wall.png')));
+		}
 	}
 
 	public function getLevelAsset(asset:String):String
