@@ -52,14 +52,20 @@ class PlayState extends FlxState
 		{
 			FlxG.camera.bgColor = FlxColor.fromString('#1D1B23');
 
-			bgOptionElements.add(new TouchMeSprite(183, 109, 'assets/play/level1/door.png').addClickFunction(o -> newLevel('enterDoor')));
+			bgOptionElements.add(new TouchMeSprite(183, 109, getLevelAsset('door.png')).addClickFunction(o -> newLevel('enterDoor')));
 
-			mgElements.add(new TouchMeSprite(0, 0, 'assets/play/level1/floorback.png'));
-			mgElements.add(new TouchMeSprite(0, 0, 'assets/play/level1/wall.png'));
+			mgElements.add(new TouchMeSprite(0, 0, getLevelAsset('floorback.png')));
+			mgElements.add(new TouchMeSprite(0, 0, getLevelAsset('wall.png')));
 
-			fgOptionElements.add(new TouchMeSprite(401, 0, 'assets/play/level1/rope.png').addClickFunction(o -> newLevel('climbRope')));
+			fgOptionElements.add(new TouchMeSprite(401, 0, getLevelAsset('rope.png')).addClickFunction(o -> newLevel('climbRope')));
 		}
 	}
+
+	public function getLevelAsset(asset:String):String
+		return _getLevelAsset(this.level, asset);
+
+	public static function _getLevelAsset(level:String, asset:String):String
+		return 'assets/play/$level/$asset';
 
 	public static function newLevel(level:String)
 	{
