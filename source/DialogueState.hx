@@ -26,8 +26,10 @@ class DialogueState extends FlxState
 		super.create();
 		dialogueBit = 0;
 
+		FlxG.camera.bgColor = FlxColor.WHITE;
+
 		diaText = new FlxText();
-		diaText.color = FlxColor.WHITE;
+		diaText.color = FlxColor.BLACK;
 		diaText.size = 32;
 		add(diaText);
 
