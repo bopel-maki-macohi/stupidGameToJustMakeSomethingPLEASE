@@ -81,7 +81,7 @@ class DialogueState extends FlxState
 			else if (dialogueBit == 1)
 				diaText.text = 'Due...';
 			else if (dialogueBit == 3)
-				diaText.text = 'IM GONNA BEAT YOUR ASS!';
+				diaText.text = 'IM GONNA\nBEAT YOUR\nASS!';
 			else if (dialogueBit == 4)
 				diaText.text = 'Gota catch me first >:3';
 			else if (dialogueBit == 5)
