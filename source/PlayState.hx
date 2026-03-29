@@ -15,8 +15,9 @@ class PlayState extends FlxState
 	{
 		super();
 
-		this.level = level;
+		this.level = level ?? 'intro';
 		trace('New level: ${this.level}');
+		Main.save.data.lastLevel = this.level;
 	}
 
 	public var due:FlxSprite;
